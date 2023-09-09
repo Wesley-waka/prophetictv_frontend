@@ -1,10 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import "./room.css";
 import "./mai.css";
-
-// import { AgoraRTC } from "./AgoraRTC_N-4.11.0";
-// import { AgoraRTM } from "./agora-rtm-sdk-1.4.4";
-
+import "./lobby.css";
+import { expandVideoFrame, hideDisplayFrame } from "./room";
 const Room = () => {
   let activeChatContainer = false;
   let activeMemberContainer = false;
@@ -35,6 +33,8 @@ const Room = () => {
   if (!displayName) {
     window.location = "lobby";
   }
+
+  localStorage.setItem("chatLink", window.location.href);
 
   let localTracks = [];
   let remoteUsers = {};
@@ -104,39 +104,7 @@ const Room = () => {
     activeChatContainer = !activeChatContainer;
   };
   // expand vid frame
-  const expandVideoFrame = (e) => {
-    let child = displayFrame.children[0];
-    if (child) {
-      document.getElementById("streams__container").appendChild(child);
-    }
 
-    displayFrame.style.display = "block";
-    displayFrame.appendChild(e.currentTarget);
-    userIdInDisplayFrame = e.currentTarget.id;
-
-    for (let i = 0; videoFrames.length > i; i++) {
-      if (videoFrames[i].id != userIdInDisplayFrame) {
-        videoFrames[i].style.height = "100px";
-        videoFrames[i].style.width = "100px";
-      }
-    }
-  };
-  for (let i = 0; videoFrames.length > i; i++) {
-    videoFrames[i].addEventListener("click", expandVideoFrame);
-  }
-  // hide disp
-  const hideDisplayFrame = () => {
-    userIdInDisplayFrame = null;
-    displayFrame.style.display = null;
-
-    let child = displayFrame.children[0];
-    document.getElementById("streams__container").appendChild(child);
-
-    for (let i = 0; videoFrames.length > i; i++) {
-      videoFrames[i].style.height = "300px";
-      videoFrames[i].style.width = "300px";
-    }
-  };
   //end
 
   let joinStream = async () => {
@@ -320,6 +288,8 @@ const Room = () => {
       localTracks[i].stop();
       localTracks[i].close();
     }
+
+    window.location = "lobby";
 
     await client.unpublish([localTracks[0], localTracks[1]]);
 
@@ -545,8 +515,8 @@ const Room = () => {
             <div id="member__list"></div>
           </section>
 
-          <section id="stream__container" onClick={hideDisplayFrame}>
-            <div id="stream__box" onClick={expandVideoFrame}></div>
+          <section id="stream__container">
+            <div id="stream__box"></div>
             <div id="streams__container"></div>
             <div className="stream__actions">
               <button id="camera-btn" className="active" onClick={toggleCamera}>
