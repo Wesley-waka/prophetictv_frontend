@@ -88,14 +88,14 @@ const SeedDonation = () => {
 
   return (
     <PayPalScriptProvider options={{ "client-id": CLIENT_ID }}>
-      <div className="sm:flex sm:flex-row sm:space-x-5">
+      <div className="sm:flex sm:flex-row sm:space-x-5 bg-slate-50 text-black">
         {/* lg screens dashboard */}
 
         <DashBoard />
 
         {/* lg screens dashboard */}
 
-        <div className="w-screen flex flex-col justify-between">
+        <div className="w-screen flex flex-col justify-between bg-slate-50 text-black">
           <div className="sm:w-full ">
             <div>
               <div>

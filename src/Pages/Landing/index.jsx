@@ -17,7 +17,7 @@ const Landing = () => {
   const Background = isMobile ? circles : mountains;
 
   return (
-    <Background className="h-max lg:flex lg:flex-row lg:space-x-2 lg:h-screen">
+    <Background className="h-max lg:flex lg:flex-row lg:space-x-2 lg:h-screen bg-slate-50 text-black">
       <div
         style={{
           backgroundImage: "url('/group-10.svg')",
@@ -37,7 +37,7 @@ const Landing = () => {
       </div>
 
       {/* sm screens */}
-      <div className="px-9 py-4 flex flex-col space-y-1 text-left text-3xl lg:hidden">
+      <div className="px-9 py-4 flex flex-col h-full space-y-1 text-left text-3xl lg:hidden ">
         <h1 className=" text-center pt-4 mt-2 text-white text-3xl lg:hidden">
           Prophetic Tv
         </h1>
@@ -78,7 +78,7 @@ const Landing = () => {
       </div>
       {/* sm screens */}
 
-      <div className="hidden lg:block lg:my-40 px-6">
+      <div className="hidden lg:block lg:my-40 px-6 ">
         <div className="sm:flex sm:flex-row sm:space-x-2">
           <Link
             to={"/member/sign"}

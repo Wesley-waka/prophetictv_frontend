@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Donation = () => {
   return (
-    <div className="flex flex-col justify-between h-screen">
+    <div className="flex flex-col justify-between h-100  bg-slate-50 text-black">
       <div className="pl-3">
         <div className="mt-2 ml-3 mr-6 mb-4 flex row space-x-2 items-center">
           <AiOutlineMenu />

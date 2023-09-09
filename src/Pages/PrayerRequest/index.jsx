@@ -43,13 +43,13 @@ const PrayerRequest = () => {
   return (
     <>
       {token ? (
-        <div className="lg:flex lg:flex-row lg:space-x-5">
+        <div className="h-full lg:flex lg:flex-row lg:space-x-5 bg-slate-50 text-black">
           {/* lg screens dashboard */}
           <DashBoard />
 
           {/* lg screens dashboard */}
-          <div className="w-screen ">
-            <div className="sm:w-full h-screen flex flex-col justify-between">
+          <div className="w-screen h-screen  bg-slate-50 text-black">
+            <div className="sm:w-full h-full flex flex-col justify-between">
               <div>
                 <div className="bg-purple-700 pt-2 text-white ">
                   <div className="flex row space-x-2 ml-8 items-center">

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const MenuBar = () => {
   return (
     <div>
-      <div className="lg:hidden border-t-2 ">
+      <div className="lg:hidden border-t-2 bg-slate-50 ">
         {/* <img className="" src="/Vector.svg" alt="" /> */}
         <div className=" ml-5 pb-3 rounded-full p-2 flex row space-x-6  justify-between items-center">
           <div className="h-18 w-14">

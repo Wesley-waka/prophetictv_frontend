@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import "./lobby.css";
-import "./mai.css";
+import "../Room/lobby.css";
+import "../Room/mai.css";
 import { Link } from "react-router-dom";
 function LobbyForm() {
   const [displayName, setDisplayName] = useState("");
@@ -27,7 +27,7 @@ function LobbyForm() {
   };
 
   return (
-    <body>
+    <div className="body_room bg-gray-900">
       <header id="nav">
         <div className="nav--list">
           <a href="lobby">
@@ -39,8 +39,8 @@ function LobbyForm() {
         </div>
 
         <div id="nav__links">
-          <Link className="nav__link" to={"/lobby"}>
-            Lobby
+          <Link className="nav__link" to={"/prayer"}>
+            Home
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -112,7 +112,7 @@ function LobbyForm() {
           </form>
         </div>
       </main>
-    </body>
+    </div>
   );
 }
 

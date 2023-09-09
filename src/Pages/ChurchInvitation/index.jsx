@@ -5,7 +5,7 @@ import SideBoard from "../../Components/SideBoard";
 import { AiOutlineMenu } from "react-icons/ai";
 import { useEffect, useState } from "react";
 
-const SermonDownload = () => {
+const ChurchInvitation = () => {
   const [sermonDownloads, setSermonDownloads] = useState([]);
 
   // useEffect(() => {
@@ -31,26 +31,26 @@ const SermonDownload = () => {
     setSermonDownloads(parsedSermonDownloads);
   }, []);
   // console.log(sermonDownloads[0].speaker);
-  const userType = localStorage.getItem("userType");
+  // const userType = localStorage.getItem("userType");
 
   return (
-    <div className="lg:flex lg:flex-row lg:space-x-5 bg-slate-50 text-black">
+    <div className="lg:flex lg:flex-row lg:space-x-5 bg-slate-50 text-black h-full">
       <DashBoard />
-      <div className="w-screen flex flex-col h-screen justify-between bg-slate-50 text-black">
+      <div className="w-screen flex flex-col h-full justify-between bg-slate-50 text-black">
         <div className="lg:w-full">
           <div className="bg-purple-700 pt-2 text-white ">
             <div className="flex column space-y-10 pl-4 pt-2 pr-10 pb-1">
               <div className="pl-8 sm:pl-0">
                 <div className=" flex row space-x-2 items-center sm:space-x-4 sm:flex sm:row">
-                  <AiOutlineMenu className="sm:hidden" />
-                  <div className="sm:pr-10">
+                  <AiOutlineMenu className="lg:hidden" />
+                  {/* <div className="sm:pr-10">
                     <Link to={"/sermons"}>
                       <h5 className="hidden sm:inline text-3xl sm:font-medium sm:text-xl ">
                         Sermon
                       </h5>
                     </Link>
-                  </div>
-                  {userType === "Admin" ? (
+                  </div> */}
+                  {/* {userType === "Admin" ? (
                     <div className="hidden sm:pr-10">
                       <Link to="/sermons/form">
                         <h5 className="sm:inline text-3xl sm:font-medium sm:text-xl ">
@@ -60,10 +60,10 @@ const SermonDownload = () => {
                     </div>
                   ) : (
                     ""
-                  )}
+                  )} */}
                   <div>
-                    <h5 className="text-3xl font-bold sm:font-medium sm:text-xl sm:border-b-2 sm:border-white-700">
-                      Downloads
+                    <h5 className="text-3xl font-bold lg:font-medium lg:text-xl lg:border-b-2 lg:border-white-700">
+                      Church Invitation
                     </h5>
                   </div>
                 </div>
@@ -116,4 +116,4 @@ const SermonDownload = () => {
   );
 };
 
-export default SermonDownload;
+export default ChurchInvitation;

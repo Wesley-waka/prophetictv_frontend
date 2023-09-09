@@ -57,6 +57,7 @@ import SermonDownload from "./Pages/SermonDownloads";
 import { useMediaQuery, useTheme } from "@material-ui/core";
 import Room from "./Pages/Room/Room";
 import LobbyForm from "./Pages/Lobby/lobby";
+import ChurchInvitation from "./Pages/ChurchInvitation";
 
 const App = () => {
   const [showHomePage, setShowHomePage] = useState(false);
@@ -80,9 +81,9 @@ const App = () => {
             showHomePage ? (
               <Landing />
             ) : isMobile ? (
-              <Landing />
-            ) : (
               <SplashBar onFinish={handleSplashScreenFinish} />
+            ) : (
+              <Landing />
             )
           }
 
@@ -92,6 +93,7 @@ const App = () => {
         <Route path="/landing" element={<Landing />} />
         <Route path="/room" element={<Room />} />
         <Route path="/lobby" element={<LobbyForm />} />
+        <Route path="/churchInvitation" element={<ChurchInvitation />} />
 
         <Route path="/admin/home" element={<AdminHome />} />
 

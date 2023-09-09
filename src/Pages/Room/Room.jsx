@@ -451,7 +451,7 @@ const Room = () => {
   window.addEventListener("beforeunload", leaveChannel);
 
   return (
-    <div>
+    <div className="body_room">
       <header id="nav">
         <div className="nav--list">
           <button id="members__button" onClick={toggleMemberContainer}>

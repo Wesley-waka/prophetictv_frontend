@@ -55,7 +55,7 @@ const DashBoard = () => {
         </div>
 
         <div className="bg-purple-800 rounded-2xl px-2 cursor-pointer">
-          <div className="flex flex-row space-x-1 mt-5 py-2 ">
+          {/* <div className="flex flex-row space-x-1 mt-5 py-2 ">
             <img
               src="/Dashboard/group.png"
               className="w-11 h-12 mt-2"
@@ -65,9 +65,9 @@ const DashBoard = () => {
               <h4 className="font-bold cursor-pointer">Participants</h4>
               <p>All Participants who are in live streaming</p>
             </div>
-          </div>
+          </div> */}
         </div>
-        <Link to={"http://localhost:3001/"}>
+        <Link to={"/lobby"}>
           <div className="bg-purple-800 rounded-2xl px-2 cursor-pointer">
             <div className="flex flex-row space-x-1 mt-5 py-2">
               <img

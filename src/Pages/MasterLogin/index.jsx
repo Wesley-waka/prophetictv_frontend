@@ -57,7 +57,7 @@ const MasterLogin = () => {
   };
 
   return (
-    <Background className="h-screen lg:flex lg:flex-row lg:space-x-2 lg:h-screen">
+    <Background className="h-full lg:flex lg:flex-row lg:space-x-2 lg:h-screen bg-slate-50">
       <div
         style={{
           backgroundImage: "url('/group-10.svg')",

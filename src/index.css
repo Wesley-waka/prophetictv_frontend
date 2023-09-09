@@ -16,7 +16,7 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: transparent;
+  background: #fff;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -44,4 +44,8 @@
 
 .homepage-fade-in {
   animation: fadeIn 1s forwards;
+}
+
+body {
+  background-color: #1a1a1a;
 }
