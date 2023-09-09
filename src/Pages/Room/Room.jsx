@@ -34,7 +34,7 @@ const Room = () => {
     window.location = "lobby";
   }
 
-  localStorage.setItem("chatLink", window.location.href);
+  localStorage.setItem("chatLink", urlParams.get("room"));
 
   let localTracks = [];
   let remoteUsers = {};
