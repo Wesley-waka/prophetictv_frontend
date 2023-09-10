@@ -7,7 +7,7 @@ const Room = () => {
   let activeChatContainer = false;
   let activeMemberContainer = false;
   let userIdInDisplayFrame = null;
-  const APP_ID = "a63b24b789c94dc984cafb185e148125";
+  const APP_ID = "66cbb6655ea2466bb03689ed92fdaffd";
 
   let uid = sessionStorage.getItem("uid");
   if (!uid) {
