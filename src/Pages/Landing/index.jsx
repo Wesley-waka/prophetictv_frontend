@@ -46,6 +46,9 @@ const Landing = () => {
           className="w-13 h-13 pt-8 pb-16 lg:w-36 lg:h-40 "
           alt=""
         />
+        <div className="text-3xl text-center text-white font-extralight">
+          SELECT ROLE
+        </div>
         <div className="flex flex-col-reverse space-y-3">
           <Link
             to={"/master/sign"}

@@ -1,5 +1,5 @@
 import nodemailer from 'nodemailer';
-import './bootstrap-globals';
+// import './bootstrap-globals';
 import express from 'express';
 import cors from 'cors';
 // const cors = require('cors'); // Import the cors middleware

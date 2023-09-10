@@ -3,7 +3,7 @@ import { AiOutlineMenu } from "react-icons/ai";
 import { Link } from "react-router-dom";
 const Dashboard = () => {
   return (
-    <div className="flex flex-col justify-between h-100  bg-slate-50 text-black">
+    <div className="flex flex-col justify-between h-screen  bg-slate-50 text-black">
       <div>
         <div className="mt-2 ml-5  mb-4 text-3xl font-bold flex row space-x-36 md:justify-between">
           <div className="flex row">
@@ -15,7 +15,7 @@ const Dashboard = () => {
         <div className="mx-5 mt-8">
           <div className="flex flex-col space-y-3 mb-28">
             <Link
-              to={"http://localhost:3001/"}
+              to={"/lobby"}
               className="mx-3  bg-purple-700 pt-2 px-4 pb-4 text-slate-200 rounded-lg"
             >
               <h4 className="text-left font-extrabold">Live Video</h4>
@@ -25,7 +25,7 @@ const Dashboard = () => {
               </p>
             </Link>
             <Link
-              to={"http://localhost:3001/"}
+              to={"/lobby"}
               className="mx-3  bg-purple-700 pt-2 px-4 pb-4 text-slate-200 rounded-lg"
             >
               <h4 className="text-left font-extrabold">Join Videos</h4>

@@ -3,7 +3,11 @@ import "./room.css";
 import "./mai.css";
 import "./lobby.css";
 import { expandVideoFrame, hideDisplayFrame } from "./room";
+import AgoraRTM from "agora-rtm-sdk";
+import AgoraRTC from "agora-rtc-sdk";
+import { useNavigate } from "react-router-dom";
 const Room = () => {
+  const Navigate = useNavigate();
   let activeChatContainer = false;
   let activeMemberContainer = false;
   let userIdInDisplayFrame = null;
@@ -31,7 +35,8 @@ const Room = () => {
 
   let displayName = sessionStorage.getItem("display_name");
   if (!displayName) {
-    window.location = "lobby";
+    // window.location = "lobby";
+    Navigate("/lobby");
   }
 
   localStorage.setItem("chatLink", urlParams.get("room"));
@@ -289,8 +294,8 @@ const Room = () => {
       localTracks[i].close();
     }
 
-    window.location = "lobby";
-
+    // window.location = "lobby";
+    Navigate("/lobby");
     await client.unpublish([localTracks[0], localTracks[1]]);
 
     if (localScreenTracks) {

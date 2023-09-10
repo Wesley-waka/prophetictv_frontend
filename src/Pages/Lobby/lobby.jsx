@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import "../Room/lobby.css";
 import "../Room/mai.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 function LobbyForm() {
   const [displayName, setDisplayName] = useState("");
   const [roomName, setRoomName] = useState("");
-
+  const navigate = useNavigate();
   useEffect(() => {
     const storedDisplayName = sessionStorage.getItem("display_name");
     if (storedDisplayName) {
@@ -23,7 +23,7 @@ function LobbyForm() {
       inviteCode = String(Math.floor(Math.random() * 10000));
     }
 
-    window.location = `room?room=${inviteCode}`;
+    navigate(`/room?room=${inviteCode}`);
   };
 
   return (
