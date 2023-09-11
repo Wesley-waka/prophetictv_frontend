@@ -4,8 +4,8 @@ import "./mai.css";
 import "./lobby.css";
 import { expandVideoFrame, hideDisplayFrame } from "./room";
 import AgoraRTM from "agora-rtm-sdk";
-import AgoraRTC from "agora-rtc-sdk";
-import { useNavigate } from "react-router-dom";
+import AgoraRTC from "agora-rtc-sdk-ng";
+import { Link, useNavigate } from "react-router-dom";
 const Room = () => {
   const Navigate = useNavigate();
   let activeChatContainer = false;
@@ -474,12 +474,12 @@ const Room = () => {
               <path d="M24 19h-24v-1h24v1zm0-6h-24v-1h24v1zm0-6h-24v-1h24v1z"></path>
             </svg>
           </button>
-          <a href="lobby">
+          <Link to={"/lobby"}>
             <h3 id="logo">
               <img src="./fav.png" alt="Site Logo" />
               <span>Prophetic Tv</span>
             </h3>
-          </a>
+          </Link>
         </div>
 
         <div id="nav__links">
@@ -495,6 +495,7 @@ const Room = () => {
               <path d="M24 20h-3v4l-5.333-4h-7.667v-4h2v2h6.333l2.667 2v-2h3v-8.001h-2v-2h4v12.001zm-15.667-6l-5.333 4v-4h-3v-14.001l18 .001v14h-9.667zm-6.333-2h3v2l2.667-2h8.333v-10l-14-.001v10.001z"></path>
             </svg>
           </button>
+          <Link to={"/churchinvitation"}>Invite Church</Link>
           <a className="nav__link" id="create__room__btn" href="lobby">
             Create Room
             <svg

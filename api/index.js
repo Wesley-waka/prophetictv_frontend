@@ -5,7 +5,9 @@ import cors from 'cors';
 // const cors = require('cors'); // Import the cors middleware
 const app = express();
 const PORT = process.env.PORT ?? 8081;
-
+const corsOptions = {
+    origin: ['http://localhost:3001', 'https://example.com'], // Add the allowed origins here
+};
 const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
@@ -16,9 +18,7 @@ const transporter = nodemailer.createTransport({
 
 app.use(express.json());
 app.use(cors());
-const corsOptions = {
-    origin: ['http://localhost:3001', 'https://example.com'], // Add the allowed origins here
-};
+
 
 app.use(cors(corsOptions));
 app.post('/send-email', (req, res) => {

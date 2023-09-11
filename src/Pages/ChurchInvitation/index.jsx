@@ -9,6 +9,55 @@ import ChurchCard from "../ChurchCard";
 const ChurchInvitation = () => {
   const [churches, setChurches] = useState([]);
   const [isInvited, setIsInvited] = useState(false);
+  const [churchId, setSelectedChurchId] = useState();
+
+  useEffect(() => {
+    fetch(`http://127.0.0.1:3000/church/${churchId}`)
+      .then((res) => res.json())
+      .then((data) => {
+        // console.log(data);
+
+        const emails = [
+          data.admin.email,
+          ...data.members.map((member) => member.email),
+        ];
+
+        emails.forEach((email) => {
+          const emailData = {
+            from: "prophetictvevent@gmail.com",
+            to: email,
+            subject: "Live Video Streaming Invitation",
+            text: `You have been invited for a Live video streaming platform. Click the link to be redirected: ${window.location.href}`,
+          };
+
+          fetch("http://localhost:8081/send-email", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(emailData),
+          })
+            .then((response) => {
+              if (!response.ok) {
+                throw new Error("Network response was not ok");
+              }
+              return response.json();
+            })
+            .then((dat) => {
+              console.log(`Email sent to ${email}:`, dat);
+            })
+            .catch((error) => {
+              console.error(`Email sending to ${email} failed:`, error);
+            });
+        });
+      });
+  }, [churchId]);
+  console.log(churchId);
+
+  const handleEmail = (id) => {
+    setIsInvited(!isInvited);
+    setSelectedChurchId(id);
+  };
 
   useEffect(() => {
     axios
@@ -35,9 +84,9 @@ const ChurchInvitation = () => {
               </div>
             </div>
           </div>
-          <div className="mb-4 mt-4 ml-2 h-96 sm:h-0">
+          <div className="mb-4 mt-4 ml-2 h-full sm:h-0">
             {churches.map((church) => (
-              <ChurchCard key={church.id} church={church} />
+              <ChurchCard key={church.id} church={church} handleEmail={handleEmail} />
             ))}
           </div>
         </div>

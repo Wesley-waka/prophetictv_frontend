@@ -127,7 +127,7 @@ const MasterLogin = () => {
             </label>
             {/* {errors} */}
             <button className="rounded-full bg-white py-3 px-6 mt-10">
-              Register
+              Login
             </button>
           </form>
         </div>
