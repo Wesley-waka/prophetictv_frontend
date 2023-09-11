@@ -28,9 +28,9 @@ const MasterLogin = () => {
 
     try {
       const response = await axios.post(
-        "https://prophetictvevent.fly.dev/superadmin/login",
+        "https://prophetictvapi.fly.dev/superadmin/login",
         {
-          username: username,
+          name: username,
           email: email,
           password: password,
         },
@@ -43,7 +43,7 @@ const MasterLogin = () => {
         const person = response.data;
         console.log(person.id);
         localStorage.setItem("token", person.jwt);
-        localStorage.setItem("userName", person.admin.username);
+        localStorage.setItem("userName", person.admin.name);
         localStorage.setItem("userType", "master");
         if (isMobile) {
           navigate("/dashboard");
@@ -110,7 +110,7 @@ const MasterLogin = () => {
             />
             <input
               className="p-2 my-6 rounded-lg"
-              type="text"
+              type="password"
               value={password}
               placeholder="password"
               onChange={(e) => setPassword(e.target.value)}

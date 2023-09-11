@@ -3,7 +3,7 @@ import { AiOutlineMenu } from "react-icons/ai";
 import { Link } from "react-router-dom";
 const Dashboard = () => {
   return (
-    <div className="flex flex-col justify-between h-screen  bg-slate-50 text-black">
+    <div className="flex flex-col justify-between h-full bg-slate-50 text-black">
       <div>
         <div className="mt-2 ml-5  mb-4 text-3xl font-bold flex row space-x-36 md:justify-between">
           <div className="flex row">

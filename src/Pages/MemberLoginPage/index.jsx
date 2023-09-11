@@ -111,7 +111,7 @@ const MemberLoginPage = () => {
             />
             <input
               className="p-2 my-6 rounded-lg"
-              type="text"
+              type="password"
               value={password}
               placeholder="password"
               onChange={(e) => setPassword(e.target.value)}

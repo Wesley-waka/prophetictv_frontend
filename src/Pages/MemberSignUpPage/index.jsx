@@ -131,7 +131,7 @@ const MemberSignUpPage = () => {
 
             <input
               className="p-2 my-6 rounded-lg"
-              type="text"
+              type="password"
               value={password}
               placeholder="password"
               onChange={(e) => setPassword(e.target.value)}
@@ -212,7 +212,7 @@ const MemberSignUpPage = () => {
             {/* church entry */}
             <input
               className="p-2 my-6 rounded-lg"
-              type="text"
+              type="password"
               value={password}
               placeholder="password"
               onChange={(e) => setPassword(e.target.value)}
@@ -233,7 +233,7 @@ const MemberSignUpPage = () => {
             </button>
             <h6 className="text-xl mt-4">
               I have an Account?
-              <span className="lg:hidden text-sky-600">
+              <span className=" text-sky-600">
                 <Link to={"/leader/login"}>Sign in</Link>
               </span>
             </h6>

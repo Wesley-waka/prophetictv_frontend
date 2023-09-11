@@ -1,5 +1,4 @@
 // ChurchCard.js
-import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 
 const ChurchCard = ({ church, handleEmail }) => {
@@ -15,7 +14,9 @@ const ChurchCard = ({ church, handleEmail }) => {
         <div className="sm:my-10 my-6">
           <h3 className="text-lg font-extralight text-slate-800">
             Preacher:
-            <span className="font-semibold text-black">{church.admin}</span>
+            <span className="font-semibold text-black">
+              {church.admin.username}
+            </span>
           </h3>
           <h3 className="text-lg font-extralight text-slate-800">
             Location:
@@ -26,7 +27,13 @@ const ChurchCard = ({ church, handleEmail }) => {
         </div>
       </div>
       <div>
-        {isInvited ? (
+        <button
+          onClick={handleEmail(church.id)}
+          className="invite rounded-full bg-purple-700 sm:mt-10 mt-2 mb-20 mx-auto px-2 py-2 w-32 text-white"
+        >
+          Invite
+        </button>
+        {/* {isInvited ? (
           <button
             // onClick={handleEmail}
             className="invite rounded-full bg-gray-300 sm:mt-10 mt-2 mb-20 mx-auto px-2 py-2 w-32 text-white"
@@ -34,13 +41,13 @@ const ChurchCard = ({ church, handleEmail }) => {
             Sent
           </button>
         ) : (
-          <button
-            onClick={handleEmail(church.id)}
+        <button
+            // onClick={handleEmail}
             className="invite rounded-full bg-purple-700 sm:mt-10 mt-2 mb-20 mx-auto px-2 py-2 w-32 text-white"
           >
-            Invite
+            Sent
           </button>
-        )}
+        )} */}
       </div>
     </div>
   );
@@ -50,7 +57,7 @@ ChurchCard.propTypes = {
   church: PropTypes.shape({
     id: PropTypes.number,
     ministryname: PropTypes.string,
-    admin: PropTypes.string,
+    admin: PropTypes.object,
     ministrylocation: PropTypes.string,
     // Add any other properties you have in the church object.
   }).isRequired,

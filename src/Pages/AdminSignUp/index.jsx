@@ -133,7 +133,7 @@ const AdminSignUp = () => {
             {/* church entry */}
             <input
               className="p-2 my-6 rounded-lg"
-              type="text"
+              type="password"
               value={password}
               placeholder="password"
               onChange={(e) => setPassword(e.target.value)}
@@ -241,6 +241,12 @@ const AdminSignUp = () => {
             <button className="rounded-full bg-white py-3 px-6 mt-10">
               Register
             </button>
+            <h6 className="text-xl mt-4">
+              I have an Account?
+              <span className=" text-sky-600">
+                <Link to={"/leader/login"}>Sign in</Link>
+              </span>
+            </h6>
           </form>
         </div>
       </div>

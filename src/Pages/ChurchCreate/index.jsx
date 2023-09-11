@@ -35,12 +35,12 @@ const PrayerRequest = () => {
       });
   };
   return (
-    <div className="sm:flex sm:flex-row sm:space-x-5 bg-slate-50 text-black">
+    <div className="h-full sm:flex sm:flex-row sm:space-x-5 bg-slate-50 text-black">
       {/* lg screens dashboard */}
       <DashBoard />
 
       {/* lg screens dashboard */}
-      <div className="w-screen bg-slate-50 text-black h-full">
+      <div className="w-screen bg-slate-50 text-black ">
         <div className="sm:w-full">
           <div className="bg-purple-700 pt-2 text-white sm:pt-8 sm:pb-4 ">
             <div className="flex row space-x-2 ml-8 items-center">
@@ -50,7 +50,7 @@ const PrayerRequest = () => {
           </div>
           <form
             onSubmit={handleSubmit}
-            className="flex flex-col px-8 pt-1 sm:pt-8 sm:space-y-10"
+            className="flex flex-col px-8 pt-1 sm:pt-8 sm:space-y-10 h-screen"
           >
             <div>
               <label htmlFor="name" className="pb-1 mr-14">
