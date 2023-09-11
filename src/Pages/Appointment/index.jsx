@@ -21,7 +21,7 @@ const Appointment = () => {
     e.preventDefault();
     axios
       .post(
-        "https://prophetictvevent.fly.dev/appointments/create",
+        "https://prophetictvapi.fly.dev/appointments/create",
         {
           fullname: fullName,
           email: email,

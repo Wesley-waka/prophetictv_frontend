@@ -25,7 +25,7 @@ const AdminSignUp = () => {
   const navigate = useNavigate();
   useEffect(() => {
     axios
-      .get("https://prophetictvevent.fly.dev/church/all")
+      .get("https://prophetictvapi.fly.dev/church/all")
       .then((res) => setChurches(res.data));
   }, []);
   const handleSubmit = async (e) => {
@@ -33,7 +33,7 @@ const AdminSignUp = () => {
 
     try {
       const response = await axios.post(
-        "https://prophetictvevent.fly.dev/admin/signup",
+        "https://prophetictvapi.fly.dev/admin/signup",
         {
           username: username,
           email: email,

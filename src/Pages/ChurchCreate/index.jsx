@@ -13,7 +13,7 @@ const PrayerRequest = () => {
     e.preventDefault();
     axios
       .post(
-        "https://prophetictvevent.fly.dev/church/create",
+        "https://prophetictvapi.fly.dev/church/create",
         {
           name: churchName,
           location: churchLocation,

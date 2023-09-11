@@ -86,7 +86,7 @@ const SermonDownload = () => {
                       <div className="mx-2  pt-1.5 px-3 pb-6 rounded-lg">
                         <div className="relative">
                           <img
-                            src={`https://prophetictvevent.fly.dev/${sermon.image.url}`}
+                            src={`https://prophetictvapi.fly.dev/${sermon.image.url}`}
                             className="rounded-2xl "
                             alt=""
                           />

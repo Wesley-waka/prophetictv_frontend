@@ -23,7 +23,7 @@ const SermonDetails = () => {
 
   useEffect(() => {
     axios
-      .get(`https://prophetictvevent.fly.dev/videos/${id}`)
+      .get(`https://prophetictvapi.fly.dev/videos/${id}`)
       .then((res) => {
         setData(res.data);
         setImageUrl(res.data.image.url);

@@ -34,7 +34,7 @@ const SermonVideo = () => {
     // users
     axios
       .post(
-        "https://prophetictvevent.fly.dev/downloads/create",
+        "https://prophetictvapi.fly.dev/downloads/create",
         {
           // sermon_id: sermonId,
           title: title,
@@ -78,7 +78,7 @@ const SermonVideo = () => {
   }
   useEffect(() => {
     axios
-      .get(`https://prophetictvevent.fly.dev/videos/${id}`)
+      .get(`https://prophetictvapi.fly.dev/videos/${id}`)
       .then((response) => {
         const sermonData = response.data;
         setData(sermonData);
@@ -90,7 +90,7 @@ const SermonVideo = () => {
 
   const { title, video } = data;
   const downloadVideoUrl = (sermon) => {
-    return `https://prophetictvevent.fly.dev/videos/${sermon.id}/download`;
+    return `https://prophetictvapi.fly.dev/videos/${sermon.id}/download`;
   };
 
   return (
@@ -134,7 +134,7 @@ const SermonVideo = () => {
                     // height="320"
                     className="w-72 h-52 sm:w-full sm:h-64"
                     // src={`http://localhost:3000/${video.url}`}
-                    src={`https://prophetictvevent.fly.dev/${video.url.replace(
+                    src={`https://prophetictvapi.fly.dev/${video.url.replace(
                       "autoplay=1",
                       ""
                     )}`}

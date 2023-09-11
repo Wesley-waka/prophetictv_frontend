@@ -11,7 +11,7 @@ const PrayerList = () => {
 
   useEffect(() => {
     axios
-      .get("https://prophetictvevent.fly.dev/prayers") // Assuming the URL is correct
+      .get("https://prophetictvapi.fly.dev/prayers") // Assuming the URL is correct
       .then((response) => {
         setPrayers(response.data); // Extract and set the data
       })

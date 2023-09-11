@@ -12,7 +12,7 @@ const Sermons = () => {
   const [clear, setClear] = useState("cleared");
   useEffect(() => {
     axios
-      .get(`https://prophetictvevent.fly.dev/videos`)
+      .get(`https://prophetictvapi.fly.dev/videos`)
       .then((res) => {
         setData(res.data);
       })

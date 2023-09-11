@@ -27,7 +27,7 @@ const MemberSignUpPage = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "https://prophetictvevent.fly.dev/member/signup",
+        "https://prophetictvapi.fly.dev/member/signup",
         {
           username: username,
           email: email,
@@ -52,7 +52,7 @@ const MemberSignUpPage = () => {
   };
   useEffect(() => {
     axios
-      .get("https://prophetictvevent.fly.dev/church/all")
+      .get("https://prophetictvapi.fly.dev/church/all")
       .then((res) => setChurches(res.data));
   }, []);
   console.log(churches);

@@ -16,7 +16,7 @@ const ChurchInvitation = () => {
   useEffect(() => {
     if (churchId !== null) {
       axios
-        .get(`https://prophetictvevent.fly.dev/church/${churchId}`)
+        .get(`https://prophetictvapi.fly.dev/church/${churchId}`)
         .then((res) => {
           const data = res.data;
           const emails = [
@@ -55,7 +55,7 @@ const ChurchInvitation = () => {
 
   useEffect(() => {
     axios
-      .get("https://prophetictvevent.fly.dev/church/all")
+      .get("https://prophetictvapi.fly.dev/church/all")
       .then((res) => setChurches(res.data))
       .catch((error) => {
         console.error("Error fetching churches:", error);

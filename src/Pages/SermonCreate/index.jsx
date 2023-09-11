@@ -42,7 +42,7 @@ const SermonCreate = () => {
       }
 
       const response = await axios.post(
-        "https://prophetictvevent.fly.dev/videos",
+        "https://prophetictvapi.fly.dev/videos",
         formData,
         {
           headers: {

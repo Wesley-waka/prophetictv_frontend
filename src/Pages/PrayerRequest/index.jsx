@@ -16,7 +16,7 @@ const PrayerRequest = () => {
     e.preventDefault();
     axios
       .post(
-        "https://prophetictvevent.fly.dev/prayers/create",
+        "https://prophetictvapi.fly.dev/prayers/create",
         {
           username: username,
           email: email,

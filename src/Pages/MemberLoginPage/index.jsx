@@ -28,7 +28,7 @@ const MemberLoginPage = () => {
 
     try {
       const response = await axios.post(
-        "https://prophetictvevent.fly.dev/member/login",
+        "https://prophetictvapi.fly.dev/member/login",
         {
           username: username,
           email: email,
