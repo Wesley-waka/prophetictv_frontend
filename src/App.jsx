@@ -33,24 +33,15 @@ import MemberSignUpPage from "./Pages/MemberSignUpPage";
 import MemberLoginPage from "./Pages/MemberLoginPage";
 
 import Landing from "./Pages/Landing";
-
 import MemberHome from "./Pages/MemberHome";
-
 import AdminHome from "./Pages/AdminHome";
-
 import MasterHome from "./Pages/MasterHome";
-
 import AdminLogin from "./Pages/AdminLogin";
-
 import AdminSignUp from "./Pages/AdminSignUp";
-
 import MasterLogin from "./Pages/MasterLogin";
-
 import SermonCreate from "./Pages/SermonCreate";
-
 import ChurchCreate from "./Pages/ChurchCreate";
 import SermonDownload from "./Pages/SermonDownloads";
-
 import { useMediaQuery, useTheme } from "@material-ui/core";
 import Room from "./Pages/Room/Room";
 import LobbyForm from "./Pages/Lobby/lobby";
