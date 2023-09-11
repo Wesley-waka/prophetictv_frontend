@@ -95,7 +95,7 @@ const SeedDonation = () => {
 
         {/* lg screens dashboard */}
 
-        <div className="w-screen flex flex-col justify-between bg-slate-50 text-black">
+        <div className="w-screen h-full flex flex-col justify-between bg-slate-50 text-black">
           <div className="sm:w-full ">
             <div>
               <div>

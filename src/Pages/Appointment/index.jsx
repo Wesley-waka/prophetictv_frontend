@@ -50,7 +50,7 @@ const Appointment = () => {
     <div className="h-full flex flex-col justify-between lg:flex lg:flex-row lg:space-x-5 bg-slate-50 text-black">
       <DashBoard />
 
-      <div className="w-screen h-100 lg:h-full flex flex-col justify-between bg-slate-50">
+      <div className="w-screen  h-screen flex flex-col justify-between bg-slate-50">
         <div className="lg:w-full ">
           <div className="bg-purple-700 pt-2 text-white ">
             <div className="flex row space-x-2 ml-8 py-4 lg:py-0 items-center">

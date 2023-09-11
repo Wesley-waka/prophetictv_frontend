@@ -59,10 +59,10 @@ const SermonCreate = () => {
     }
   };
   return (
-    <div className="lg:flex lg:flex-row lg:space-x-5 bg-slate-50 text-black">
+    <div className="h-full lg:flex lg:flex-row lg:space-x-5 bg-slate-50 text-black">
       <DashBoard />
 
-      <div className="w-screen flex flex-col justify-between h-screen bg-slate-50 text-black">
+      <div className="w-screen flex flex-col justify-between h-full bg-slate-50 text-black">
         <div className="sm:w-full">
           <div className="bg-purple-700 pt-2 text-white ">
             <div className="flex sm:hidden row space-x-6 ml-8 items-center py-2">

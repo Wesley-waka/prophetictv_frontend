@@ -22,10 +22,10 @@ const PrayerList = () => {
 
   console.log(prayers);
   return (
-    <div className="lg:flex lg:flex-row lg:space-x-2 bg-slate-50 text-black">
+    <div className="h-full lg:flex lg:flex-row lg:space-x-2 bg-slate-50 text-black">
       <DashBoard />
 
-      <div className="w-screen h-full lg:h-0 flex flex-col justify-between bg-slate-50">
+      <div className="w-screen h-screen flex flex-col justify-between bg-slate-50">
         <div className="sm:w-full">
           <div className="bg-purple-700 pt-2 text-white ">
             <div className="flex row space-x-2 ml-8 items-center">

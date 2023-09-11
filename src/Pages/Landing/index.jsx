@@ -17,7 +17,7 @@ const Landing = () => {
   const Background = isMobile ? circles : mountains;
 
   return (
-    <Background className="h-max lg:flex lg:flex-row lg:space-x-2 lg:h-screen bg-slate-50 text-black">
+    <Background className="h-full lg:flex lg:flex-row lg:space-x-2 lg:h-screen bg-slate-50 text-black">
       <div
         style={{
           backgroundImage: "url('/group-10.svg')",
@@ -80,8 +80,8 @@ const Landing = () => {
         </div>
       </div>
       {/* sm screens */}
-
       <div className="hidden lg:block lg:my-40 px-6 ">
+        <div className=" mb-2 text-center text-lg font-bold">SELECT ROLE</div>
         <div className="sm:flex sm:flex-row sm:space-x-2">
           <Link
             to={"/member/sign"}

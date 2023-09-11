@@ -43,7 +43,7 @@ const PrayerRequest = () => {
   return (
     <>
       {token ? (
-        <div className="h-screen lg:flex lg:flex-row lg:space-x-5 bg-slate-50 text-black">
+        <div className="h-full lg:flex lg:flex-row lg:space-x-5 bg-slate-50 text-black">
           {/* lg screens dashboard */}
           <DashBoard />
 

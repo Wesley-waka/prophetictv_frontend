@@ -38,10 +38,10 @@ const Sermons = () => {
   const userType = localStorage.getItem("userType");
 
   return (
-    <div className="lg:flex lg:flex-row lg:space-x-5 bg-slate-50 text-black">
+    <div className="h-full lg:flex lg:flex-row lg:space-x-5 bg-slate-50 text-black">
       <DashBoard />
 
-      <div className="w-screen h-screen lg:h-0 flex flex-col justify-between bg-slate-50 text-black">
+      <div className="w-screen h-screen  flex flex-col justify-between bg-slate-50 text-black">
         <div className="sm:w-full h-96 sm:h-0">
           <div className="bg-purple-700 pt-2 text-white ">
             <div className="flex column space-y-10 pl-4 pt-2 pr-10 pb-1">
