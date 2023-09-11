@@ -90,9 +90,9 @@ const Room = () => {
   // toggl member
   const toggleMemberContainer = () => {
     if (activeMemberContainer) {
-      memberContainer.style.display = "none";
+      document.getElementById("members__container").style.display = "none";
     } else {
-      memberContainer.style.display = "block";
+      document.getElementById("members__container").style.display = "block";
     }
 
     activeMemberContainer = !activeMemberContainer;
@@ -101,9 +101,9 @@ const Room = () => {
   // toggle chat
   const toggleChatContainer = () => {
     if (activeChatContainer) {
-      chatContainer.style.display = "none";
+      document.getElementById("messages__container").style.display = "none";
     } else {
-      chatContainer.style.display = "block";
+      document.getElementById("messages__container").style.display = "block";
     }
 
     activeChatContainer = !activeChatContainer;
