@@ -12,7 +12,7 @@
 }
 
 #members__container {
-  background-color: #262625;
+  background-color: #4b0082;
   border-right: 1px solid #797a79;
   overflow-y: auto;
   width: 90%;
@@ -37,7 +37,7 @@
   padding: 0 1rem;
   position: fixed;
   font-size: 18px;
-  background-color: #323143;
+  background-color: #845695;
   width: 218px;
 }
 
@@ -75,7 +75,7 @@
 
 #messages__container {
   height: calc(100vh - 85px);
-  background-color: #262625;
+  background-color: #4b0082;
   right: 0;
   position: absolute;
   width: 100%;
@@ -138,7 +138,7 @@
   position: fixed;
   bottom: 0;
   display: block;
-  background-color: #1a1a1a;
+  background-color: #845695;
   padding: 1em;
 }
 
@@ -158,7 +158,7 @@
 }
 
 #message__form input::placeholder {
-  color: #707575;
+  color: #ffffff;
 }
 
 #stream__container {
@@ -298,7 +298,7 @@
   position: fixed;
   bottom: 1rem;
   border-radius: 8px;
-  background-color: #1a1a1a60;
+  background-color: #4b0082;
   padding: 1rem;
   left: 50%;
   display: none;
