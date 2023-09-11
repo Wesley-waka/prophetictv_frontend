@@ -49,9 +49,6 @@ import MasterLogin from "./Pages/MasterLogin";
 import SermonCreate from "./Pages/SermonCreate";
 
 import ChurchCreate from "./Pages/ChurchCreate";
-
-// import Absent from "./Pages/Absent";
-
 import SermonDownload from "./Pages/SermonDownloads";
 
 import { useMediaQuery, useTheme } from "@material-ui/core";
