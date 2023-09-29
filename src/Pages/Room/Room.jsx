@@ -11,7 +11,7 @@ const Room = () => {
   let activeChatContainer = false;
   let activeMemberContainer = false;
   let userIdInDisplayFrame = null;
-  const APP_ID = "66cbb6655ea2466bb03689ed92fdaffd";
+  const APP_ID = "8849a7746c69490aa6f64d1741b7d0f2";
 
   let uid = sessionStorage.getItem("uid");
   if (!uid) {
@@ -19,7 +19,8 @@ const Room = () => {
     sessionStorage.setItem("uid", uid);
   }
 
-  let token = null;
+  let token =
+    "007eJxTYBDQSRZheMi9KLaj3Sd34fr9Ir+vtvSdWFSivyEpKbXmrIcCg5lRmnmSoUWSkbmJkUmagaVlaqq5sVGySbK5sUFqapLxcRmx1IZARoYt3dasjAyMDCxADOIzgUlmMMkCJjkYSlKLS+ITCwoYGACNdiIo";
   let client;
 
   let rtmClient;
