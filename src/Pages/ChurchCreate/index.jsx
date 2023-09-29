@@ -15,8 +15,8 @@ const PrayerRequest = () => {
       .post(
         "https://prophetictvapi.fly.dev/church/create",
         {
-          name: churchName,
-          location: churchLocation,
+          ministryname: churchName,
+          ministrylocation: churchLocation,
         },
         {
           headers: {
