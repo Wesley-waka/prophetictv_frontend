@@ -30,7 +30,6 @@ const SermonVideo = () => {
     const downloaded = sermon.downloaded;
     // const time = sermon.created_at;
     const speaker = sermon.speaker;
-
     // users
     axios
       .post(

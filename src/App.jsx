@@ -46,6 +46,7 @@ import { useMediaQuery, useTheme } from "@material-ui/core";
 import Room from "./Pages/Room/Room";
 import LobbyForm from "./Pages/Lobby/lobby";
 import ChurchInvitation from "./Pages/ChurchInvitation";
+import RecordingProvider from "./Context/RecordingContext";
 
 const App = () => {
   const [showHomePage, setShowHomePage] = useState(false);
@@ -60,77 +61,79 @@ const App = () => {
 
   return (
     <BrowserRouter>
-      {/* <Navbar /> */}
+      <RecordingProvider>
+        {/* <Navbar /> */}
 
-      <Routes>
-        <Route
-          path="/"
-          element={
-            showHomePage ? (
-              <Landing />
-            ) : isMobile ? (
-              <SplashBar onFinish={handleSplashScreenFinish} />
-            ) : (
-              <Landing />
-            )
-          }
+        <Routes>
+          <Route
+            path="/"
+            element={
+              showHomePage ? (
+                <Landing />
+              ) : isMobile ? (
+                <SplashBar onFinish={handleSplashScreenFinish} />
+              ) : (
+                <Landing />
+              )
+            }
 
-          // element={<HomePage />}
-        />
+            // element={<HomePage />}
+          />
 
-        <Route path="/landing" element={<Landing />} />
-        <Route path="/room" element={<Room />} />
-        <Route path="/lobby" element={<LobbyForm />} />
-        <Route path="/churchInvitation" element={<ChurchInvitation />} />
+          <Route path="/landing" element={<Landing />} />
+          <Route path="/room" element={<Room />} />
+          <Route path="/lobby" element={<LobbyForm />} />
+          <Route path="/churchInvitation" element={<ChurchInvitation />} />
 
-        <Route path="/admin/home" element={<AdminHome />} />
+          <Route path="/admin/home" element={<AdminHome />} />
 
-        <Route path="/master/home" element={<MasterHome />} />
+          <Route path="/master/home" element={<MasterHome />} />
 
-        <Route path="/master/sign" element={<MasterLogin />} />
+          <Route path="/master/sign" element={<MasterLogin />} />
 
-        {/* <Route path="/absent" element={<Absent />} /> */}
+          {/* <Route path="/absent" element={<Absent />} /> */}
 
-        <Route path="/leader/sign" element={<AdminSignUp />} />
+          <Route path="/leader/sign" element={<AdminSignUp />} />
 
-        <Route path="/leader/login" element={<AdminLogin />} />
+          <Route path="/leader/login" element={<AdminLogin />} />
 
-        <Route path="/member/home" element={<MemberHome />} />
+          <Route path="/member/home" element={<MemberHome />} />
 
-        <Route path="/member/sign" element={<MemberSignUpPage />} />
+          <Route path="/member/sign" element={<MemberSignUpPage />} />
 
-        <Route path="/member/login" element={<MemberLoginPage />} />
+          <Route path="/member/login" element={<MemberLoginPage />} />
 
-        <Route path="/prayer" element={<PrayerRequest />} />
+          <Route path="/prayer" element={<PrayerRequest />} />
 
-        <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/dashboard" element={<Dashboard />} />
 
-        {/* <Route path="/about" element={<About />} /> */}
+          {/* <Route path="/about" element={<About />} /> */}
 
-        {/* <Route path="/contact" element={<Contact />} /> */}
+          {/* <Route path="/contact" element={<Contact />} /> */}
 
-        <Route path="/prayers" element={<PrayerList />} />
+          <Route path="/prayers" element={<PrayerList />} />
 
-        <Route path="/donations" element={<Donation />} />
+          <Route path="/donations" element={<Donation />} />
 
-        <Route path="/seeddonations" element={<SeedDonation />} />
+          <Route path="/seeddonations" element={<SeedDonation />} />
 
-        <Route path="/tithedonations" element={<TitheDonation />} />
+          <Route path="/tithedonations" element={<TitheDonation />} />
 
-        <Route path="/sermons" element={<Sermons />} />
+          <Route path="/sermons" element={<Sermons />} />
 
-        <Route path="/sermons/form" element={<SermonCreate />} />
+          <Route path="/sermons/form" element={<SermonCreate />} />
 
-        <Route path="/church/form" element={<ChurchCreate />} />
+          <Route path="/church/form" element={<ChurchCreate />} />
 
-        <Route path="/sermons/downloads" element={<SermonDownload />} />
+          <Route path="/sermons/downloads" element={<SermonDownload />} />
 
-        <Route path="/sermon_details/:id" element={<SermonDetails />} />
+          <Route path="/sermon_details/:id" element={<SermonDetails />} />
 
-        <Route path="/sermon_video/:id" element={<SermonVideo />} />
+          <Route path="/sermon_video/:id" element={<SermonVideo />} />
 
-        <Route path="/appointment" element={<Appointment />} />
-      </Routes>
+          <Route path="/appointment" element={<Appointment />} />
+        </Routes>
+      </RecordingProvider>
     </BrowserRouter>
   );
 };
