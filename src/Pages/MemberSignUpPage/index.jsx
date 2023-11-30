@@ -109,17 +109,20 @@ const MemberSignUpPage = () => {
               placeholder="email"
               onChange={(e) => setEmail(e.target.value)}
             />
-            {/* church entry */}
+      {/* church entry */}
             <select
               value={church_id}
               className="p-2 my-6 rounded-lg"
               onChange={(e) => setChurchId(e.target.value)}
             >
-              <option hidden>Select Church</option>
+              <option hidden className="text-sm">
+                Select Church
+              </option>
               {churches.map((practitioner) => {
                 const department = practitioner.ministryname;
                 const firstName = practitioner.ministrylocation;
                 const practitionerId = practitioner.id;
+
                 return (
                   <option key={practitionerId} value={practitionerId}>
                     {firstName} {department}
