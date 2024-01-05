@@ -43,7 +43,7 @@ import SermonCreate from "./Pages/SermonCreate";
 import ChurchCreate from "./Pages/ChurchCreate";
 import SermonDownload from "./Pages/SermonDownloads";
 import { useMediaQuery, useTheme } from "@material-ui/core";
-import Room from "./Pages/Room/Room";
+import Room from "./Pages/Room/Room.jsx";
 import LobbyForm from "./Pages/Lobby/lobby";
 import ChurchInvitation from "./Pages/ChurchInvitation";
 
