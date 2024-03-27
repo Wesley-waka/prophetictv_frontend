@@ -4,6 +4,7 @@ import { useMediaQuery, useTheme } from "@material-ui/core";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import toast, { Toaster } from 'react-hot-toast'
 
 const mountains = styled.div`
   background-image: "none";
@@ -46,12 +47,15 @@ const MasterLogin = () => {
         localStorage.setItem("userName", person.admin.name);
         localStorage.setItem("userType", "master");
         if (isMobile) {
-          navigate("/dashboard");
+          toast.success('You have Successfully Logged in.')
+          setTimeout(() =>navigate("/dashboard"), 3000);
         } else {
-          navigate("/prayer");
+          toast.success('You have Successfully Logged in.')
+          setTimeout(() =>navigate("/prayer"), 3000);
         }
       }
     } catch (error) {
+      toast.error('Check your credentials and log back in')
       console.error("An error occurred:", error);
     }
   };
@@ -194,6 +198,7 @@ const MasterLogin = () => {
           </form>
         </div>
       </div>
+      <Toaster/>
     </Background>
   );
 };

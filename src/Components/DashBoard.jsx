@@ -1,10 +1,19 @@
-import { Link } from "react-router-dom";
+import toast, { Toaster } from 'react-hot-toast'
+import { Link, useNavigate } from "react-router-dom";
+import {useState} from 'react';
 
 const DashBoard = () => {
+  const navigate = useNavigate();
   const userType = localStorage.getItem("userType");
   const userName = localStorage.getItem("userName");
+  const [logOut,setLogOut] = useState(false);
 
-  const handleClick = () => localStorage.clear();
+  const handleClick = () => {
+    setLogOut(true)
+    toast.success('You have been successfully logged out!');
+    localStorage.clear();
+    setTimeout(() => navigate('/'), 3000);
+  };
   // const handleClick = () => localStorage.removeItem('token');
   return (
     <div>
@@ -119,7 +128,7 @@ const DashBoard = () => {
         ) : (
           ""
         )}
-        <Link to={"/"} onClick={handleClick}>
+        <div onClick={handleClick}>
           <div className="bg-purple-800 rounded-2xl px-2 cursor-pointer">
             <div className="flex flex-row space-x-1 mt-5 py-2">
               <img
@@ -133,8 +142,9 @@ const DashBoard = () => {
               </div>
             </div>
           </div>
-        </Link>
+        </div>
       </div>
+      {logOut && <Toaster/>}
       {/* lg screens dashboard */}
     </div>
   );
