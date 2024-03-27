@@ -199,7 +199,7 @@ const MemberSignUpPage = () => {
               className="p-2 my-6 rounded-lg"
               onChange={(e) => setChurchId(e.target.value)}
             >
-              <option hidden>Select Doctor</option>
+              <option hidden>Select Church</option>
               {churches.map((practitioner) => {
                 const department = practitioner.ministryname;
                 const firstName = practitioner.ministrylocation;
