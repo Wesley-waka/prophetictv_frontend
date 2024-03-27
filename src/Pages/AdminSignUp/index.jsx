@@ -24,9 +24,16 @@ const AdminSignUp = () => {
   const [church_id, setChurchId] = useState();
   const navigate = useNavigate();
   useEffect(() => {
-    axios
-      .get("https://prophetictvapi.fly.dev/church/all")
-      .then((res) => setChurches(res.data));
+    const fetchChurches = async () => {
+      try {
+        const response = await axios.get("https://prophetictvapi.fly.dev/church/all");
+        setChurches(response.data);
+      } catch (error) {
+        console.error('An error occurred while fetching the churches:', error);
+      }
+    };
+    
+    fetchChurches();
   }, []);
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -149,7 +156,7 @@ const AdminSignUp = () => {
               Remember me
             </label>
             {/* {errors} */}
-            <button className="rounded-full bg-white py-3 px-6 mt-10">
+            <button className="rounded-full text-white bg-purple-500 hover:bg-purple-700 py-3 px-6 mt-10">
               Register
             </button>
             <h6 className="text-xl mt-4">
@@ -238,7 +245,7 @@ const AdminSignUp = () => {
               Remember me
             </label>
             {/* {errors} */}
-            <button className="rounded-full bg-white py-3 px-6 mt-10">
+            <button className="rounded-full text-white bg-purple-500 hover:bg-purple-700 py-3 px-6 mt-10">
               Register
             </button>
             <h6 className="text-xl mt-4">

@@ -126,7 +126,7 @@ const MasterLogin = () => {
               Remember me
             </label>
             {/* {errors} */}
-            <button className="rounded-full bg-white py-3 px-6 mt-10">
+            <button className="rounded-full text-white bg-purple-500 hover:bg-purple-700 py-3 px-6 mt-10">
               Login
             </button>
           </form>
@@ -188,7 +188,7 @@ const MasterLogin = () => {
               Remember me
             </label>
             {/* {errors} */}
-            <button className="rounded-full bg-white py-3 px-6 mt-10">
+            <button className="rounded-full text-white bg-purple-500 hover:bg-purple-700 py-3 px-6 mt-10">
               Login
             </button>
           </form>

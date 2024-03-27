@@ -25,7 +25,7 @@ const SideBoard = () => {
               <h4>Type your Message here...</h4>
             </div>
           </div>
-          <div className="mt-4 flex flex-col space-y-4  bg-purple-800 rounded-md text-center w-72 px-6 py-12">
+          <div className="hidden mt-4  flex-col space-y-4  bg-purple-800 rounded-md text-center w-72 px-6 py-12">
             <div
               className="cursor-pointer mb-6 bg-gray-300 w-16 h-16 ml-24 px-0.5 pt-3 rounded-full text-black text-2xl"
               onClick={churchInvite}
