@@ -118,7 +118,7 @@ const PrayerRequest = () => {
         </div>
       ) : (
         // <Absent />
-        <div>not here</div>
+        <div>Log Back in</div>
       )}
     </>
   );
