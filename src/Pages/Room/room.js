@@ -2,7 +2,7 @@ let displayFrame = document.getElementById("stream__box");
 let videoFrames = document.getElementsByClassName("video__container");
 let userIdInDisplayFrame = null;
 
-export const expandVideoFrame = (e) => {
+ const expandVideoFrame = (e) => {
     let child = document.getElementById("stream__box").children[0];
     if (child) {
         document.getElementById("streams__container").appendChild(child);
@@ -23,7 +23,7 @@ for (let i = 0; videoFrames.length > i; i++) {
     videoFrames[i].addEventListener("click", expandVideoFrame);
 }
 // hide disp
-export const hideDisplayFrame = () => {
+ const hideDisplayFrame = () => {
     userIdInDisplayFrame = null;
     displayFrame.style.display = null;
 
@@ -35,3 +35,7 @@ export const hideDisplayFrame = () => {
         videoFrames[i].style.width = "300px";
     }
 };
+
+
+export const abc  = expandVideoFrame;
+export const abcd= hideDisplayFrame;

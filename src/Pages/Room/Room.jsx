@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import "./room.css";
 import "./mai.css";
 import "./lobby.css";
-import { expandVideoFrame, hideDisplayFrame } from "./room";
+import { abc } from "./room.js";
 import AgoraRTM from "agora-rtm-sdk";
 import AgoraRTC from "agora-rtc-sdk-ng";
 import { Link, useNavigate } from "react-router-dom";
@@ -137,7 +137,7 @@ const Room = () => {
       .insertAdjacentHTML("beforeend", player);
     document
       .getElementById(`user-container-${uid}`)
-      .addEventListener("click", expandVideoFrame);
+      .addEventListener("click", abc);
 
     localTracks[1].play(`user-${uid}`);
     await client.publish([localTracks[0], localTracks[1]]);
@@ -175,7 +175,7 @@ const Room = () => {
         .insertAdjacentHTML("beforeend", player);
       document
         .getElementById(`user-container-${user.uid}`)
-        .addEventListener("click", expandVideoFrame);
+        .addEventListener("click", abc);
     }
 
     if (displayFrame.style.display) {
@@ -259,7 +259,7 @@ const Room = () => {
       displayFrame.insertAdjacentHTML("beforeend", player);
       document
         .getElementById(`user-container-${uid}`)
-        .addEventListener("click", expandVideoFrame);
+        .addEventListener("click", abc);
 
       userIdInDisplayFrame = `user-container-${uid}`;
       localScreenTracks.play(`user-${uid}`);
